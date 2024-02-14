@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import CustomButton from './CustomButton';
+import { CustomButton} from '@/components';
 
 const Hero = () => {
 
@@ -12,8 +12,8 @@ const Hero = () => {
 
     return (
         <div className='hero'>
-            <div className='flex-1 pt-36 padding-x'>
-                <h1 className='2xltext-[72px] smtext-[64px] text-[50px] font-extrabold'>
+            <div className='flex-1 pt-36 px-6'>
+                <h1 className='2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold'>
                     BOOK CAR HERE
                 </h1>
                 <p className='text-[27px] text-black-100 font-light mt-5'>
@@ -27,9 +27,9 @@ const Hero = () => {
                     handleClick={handleScroll}
                 />
             </div>
-            <div className='xlflex-[1.5] flex justify-end items-end w-full xlh-screen'>
+            <div className='xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen'>
                 <div className='hero-img'>
-                    <Image src="" alt="hero"
+                    <Image src="/hero.png"  alt="hero"
                         fill className='object-contain' />
                 </div>
                 <div className="hero-img-overlay" />
