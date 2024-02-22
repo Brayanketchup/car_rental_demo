@@ -8,7 +8,7 @@ export default async function Home() {
   const isDataEmpty = !Array.isArray(allCars) || allCars.length <1 || !allCars
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 overflow-hidden">
       <Hero />
 
       <div className='mt-12 sm:px-16 px-6 py-4 max-width' id='catalogue'>

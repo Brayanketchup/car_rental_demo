@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { CustomButton} from '@/components';
+import { CustomButton } from '@/components';
 
 const Hero = () => {
 
@@ -25,17 +25,16 @@ const Hero = () => {
                     btnType='button'
                     containerStyles="bg-primary-blue text-white rounded-full p-2 mt-10"
                     handleClick={handleScroll}
+
                 />
             </div>
             <div className='xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen'>
                 <div className='hero-img'>
-                    <Image src="/hero.png"  alt="hero"
+                    <Image src="/hero.png" alt="hero"
                         fill className='object-contain' />
                 </div>
                 <div className="hero-img-overlay" />
             </div>
-
-
         </div>
     )
 }

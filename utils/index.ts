@@ -19,10 +19,10 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
     const age: number = currentYear - year;
     const mileageAdjustment: number = Math.floor(city_mpg / 10000);
   
-    const basePrice: number = 50;
+    const basePrice: number = 100;
     const ageDiscount: number = age * 5;
     const mileageDiscount: number = mileageAdjustment * 2;
   
     const price: number = basePrice - ageDiscount - mileageDiscount;
-    return Math.max(price, 0);
+    return Math.max(price, 55);
   };

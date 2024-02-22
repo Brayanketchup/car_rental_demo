@@ -6,6 +6,7 @@ import { CarProps } from '@/types';
 import { useState } from 'react';
 import  CustomButton from './CustomButton';
 import { calculateCarRent } from '@/utils';
+import { CarInfo } from '@/components';
 
 
 interface CarCardProps {
@@ -23,7 +24,7 @@ const CarCard = ( { car } : CarCardProps ) => {
     <div className='flex flex-col p-6 justify-center items-start text-black bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl group'>
         <div className='w-full flex justify-between items-start gap-2'>
             <h2 className='text-[22px] leading-[26px] font-bold capitalize'>
-                {make}{model}
+                {make} {model}
             </h2>
 
         </div>
@@ -42,17 +43,17 @@ const CarCard = ( { car } : CarCardProps ) => {
         <div className='relative flex w-full mt-2'>
             <div className='flex group-hover:invisible w-full justify-between text-gray'>
                 <div className='flex flex-col justify-center items-center gap-2'>
-                    <Image src="/gearShift.png" width={20} height={20} alt=''/>
+                    <Image src="/gear-shift.png" width={20} height={20} alt=''/>
                     <p className='text-[14px]'></p>
                     {transmission === 'a'? 'Automatic' : "Manual"}
                 </div>
                 <div className='flex flex-col justify-center items-center gap-2'>
-                    <Image src="/tireLogo.png" width={20} height={20} alt=''/>
+                    <Image src="/tire-logo.png" width={20} height={20} alt=''/>
                     <p className='text-[14px]'></p>
                     {drive.toUpperCase()}
                 </div>
                 <div className='flex flex-col justify-center items-center gap-2'>
-                    <Image src="/gasLogo.png" width={20} height={20} alt=''/>
+                    <Image src="/gas-logo.png" width={20} height={20} alt=''/>
                     <p className='text-[14px]'></p>
                     {city_mpg} MPG
                 </div>
@@ -63,15 +64,15 @@ const CarCard = ( { car } : CarCardProps ) => {
                 btnType='button'
                 title='View More'
                 containerStyles='w-full rounded-full py-[16px] bg-primary-blue'
-                textStyles="text-white text-[14px] leading-[17px] font-bold"
-                rightIcon="/rightArrow.png"
+                textStyles=" text-white text-[14px] leading-[17px] font-bold"
+                rightIcon="/right-arrow.png"
                 handleClick={()=> setisOpen(true)}
                 />
 
             </div>
         </div>
 
-
+        <CarInfo isOpen={isOpen} closeModal={()=> setisOpen(false)} car={car}/>
     </div>
   )
 }
