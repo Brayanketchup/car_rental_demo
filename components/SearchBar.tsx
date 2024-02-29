@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 import { SearchManufacturer } from '@/components'
 
-const SearchBar = () => {
+export const SearchBar = () => {
     const [manufacturer, setManufacturer] = useState('')
     const handleSeach = () =>{}
 
@@ -22,5 +22,3 @@ const SearchBar = () => {
     </form>
   )
 }
-
-export default SearchBar

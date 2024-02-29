@@ -4,16 +4,16 @@ import React from 'react'
 import Image from 'next/image';
 import { CarProps } from '@/types';
 import { useState } from 'react';
-import  CustomButton from './CustomButton';
+// import  CustomButton from './CustomButton';
 import { calculateCarRent } from '@/utils';
-import { CarInfo } from '@/components';
+import { CarInfo, CustomButton } from '@/components';
 
 
 interface CarCardProps {
     car : CarProps
 }
 
-const CarCard = ( { car } : CarCardProps ) => {
+export const CarCard = ( { car } : CarCardProps ) => {
 
     const { city_mpg, year, make, model, transmission, drive} = car;
     const [isOpen, setisOpen] = useState(false)
@@ -76,5 +76,3 @@ const CarCard = ( { car } : CarCardProps ) => {
     </div>
   )
 }
-
-export default CarCard

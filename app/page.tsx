@@ -1,11 +1,11 @@
 
-import { Hero, CustomFilter, SearchBar, CarCard } from '@/components'
+import { Hero, CustomFilter, SearchBar, CarCard, NoMoreCars } from '@/components'
 import { fetchCars } from '@/utils'
 
 export default async function Home() {
   const allCars = await fetchCars();
 
-  const isDataEmpty = !Array.isArray(allCars) || allCars.length <1 || !allCars
+  const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 overflow-hidden">
@@ -22,24 +22,22 @@ export default async function Home() {
           <SearchBar />
 
           <div className='flex justify-start flex-wrap items-center gap-2'>
-            <CustomFilter title="fuel" />
-            <CustomFilter title="year" />
+            {/* <CustomFilter title="fuel" /> */}
+            {/* <CustomFilter title="year" /> */}
           </div>
         </div>
 
         {!isDataEmpty ? (
-          <section>
+          <section id='Cars'>
             <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 w-full gap-8 pt-14'>
               {allCars?.map((car) => (
-                <CarCard car={car}     />
+                <CarCard car={car} />
               )
-              
               )}
-              
-
             </div>
+            <NoMoreCars/>
           </section>
-        ): (
+        ) : (
           <div className='mt-16 flex justify-center items-center flex-col gap-2'>
             <h2 className='text-black text-xl font-bold'>
               No cars were found :c
