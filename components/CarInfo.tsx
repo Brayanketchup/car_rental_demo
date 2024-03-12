@@ -4,6 +4,7 @@ import { CarProps } from '@/types';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Fragment } from 'react';
+import { getCarImage } from '@/utils/apiUtils';
 
 
 
@@ -12,6 +13,21 @@ interface CarInfoProps {
   closeModal: () => void;
   car: CarProps
 }
+
+// city_mpg: number,
+// class: string,
+// combination_mpg: number,
+// cylinders: number,
+// displacement: number,
+// drive: string,
+// fuel_type: string,
+// highway_mpg: number,
+// make: string,
+// model: string,
+// transmission: string,
+// year: number
+
+
 export const CarInfo = ({ isOpen, closeModal, car }: CarInfoProps) => {
 
   const [shouldRender, setShouldRender] = useState(false);
@@ -39,17 +55,46 @@ export const CarInfo = ({ isOpen, closeModal, car }: CarInfoProps) => {
         <div className="fixed inset-0 z-10 overflow-y-auto" role="dialog" aria-modal="true">
           <div className={`fixed inset-0 bg-black bg-opacity-25 transition-opacity duration-300 ease-in-out ${showAnimation ? 'opacity-100' : 'opacity-0'}`} onClick={closeModal}></div>
           <div className={`flex min-h-full items-center justify-center p-4 transition-opacity duration-300 ease-in-out ${showAnimation ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="relative bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full">
+
+
+            <div className="relative bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg w-full">
               <div className="p-4">
-                <h3 className="text-lg leading-6 font-medium text-gray-900" id="modal-title">Modal Title</h3>
-                <p className="mt-2 text-sm text-gray-500">modal description goes here</p>
+
+
+                <div className='flex flex-row justify-between'>
+                  <div className='relative flex-1 rounded-lg h-40 bg-cover bg-center bg-no-repeat'  style={{ backgroundImage: "url('/patter-background.jpg')"}}>
+                    <Image src={getCarImage(car)} alt='car model' fill priority className='object-contain' />
+                  </div>
+                </div>
+                  <h3 className="text-lg leading-6 font-bold text-gray-900 py-5" id="modal-title"> {car.make} {car.model}</h3>
+                  
+
+                <>
+                  {Object.entries(car).map(([key, value]) => (
+                    <div className='flex justify-between gap-5 w-full sm:text-sm' key={key} >
+                      <h4 className='text-grey capitalize'>
+                        {key.split("_").join(" ")}
+                      </h4>
+                      <p className='text-black-100 font-semibold text-sm sm:text-lg '>
+                        {value}
+                      </p>
+                    </div>
+                  ))}
+                </>
+
+
               </div>
+
               <div className="bg-gray-50 px-4 py-3 flex flex-row-reverse">
-                <button type="button" className="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white hover:bg-blue-700 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" onClick={closeModal}>
+                <button type="button" className="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-orange-500 text-base font-medium text-white hover:bg-orange-700 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" onClick={closeModal}>
                   Close
                 </button>
               </div>
             </div>
+
+
+
+
           </div>
         </div>
       )}

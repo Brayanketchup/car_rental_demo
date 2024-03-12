@@ -57,7 +57,7 @@ export const SearchManufacturer = ({ manufacturer, setManufacturer }: SearchManu
                         {filteredOptions.map((item) => (
                             <li
                                 key={item}
-                                className={`cursor-default select-none py-2 pl-10 pr-4 ${item === selectedManufacturer ? 'bg-primary-blue text-white' : 'text-gray-900'} hover:bg-primary-blue hover:text-white`}
+                                className={`cursor-default select-none py-2 pl-10 pr-4 ${item === selectedManufacturer ? 'bg-primary-color text-white' : 'text-gray-900'} hover:bg-primary-color hover:text-white`}
                                 onClick={() => {
                                     setSelectedManufacturer(item);
                                     setShowOptions(false);

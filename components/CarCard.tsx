@@ -4,8 +4,7 @@ import React from 'react'
 import Image from 'next/image';
 import { CarProps } from '@/types';
 import { useState } from 'react';
-// import  CustomButton from './CustomButton';
-import { calculateCarRent } from '@/utils';
+import { calculateCarRent, getCarImage } from '@/utils/apiUtils';
 import { CarInfo, CustomButton } from '@/components';
 
 
@@ -21,7 +20,7 @@ export const CarCard = ( { car } : CarCardProps ) => {
     const carRent = calculateCarRent(city_mpg, year);
 
   return (
-    <div className='flex flex-col p-6 justify-center items-start text-black bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl group'>
+    <div className='flex flex-col min-h-[350px] min-w-[230px] p-6 justify-center items-start text-black bg-primary-color-100 hover:bg-white hover:shadow-md rounded-3xl group'>
         <div className='w-full flex justify-between items-start gap-2'>
             <h2 className='text-[22px] leading-[26px] font-bold capitalize'>
                 {make} {model}
@@ -37,8 +36,8 @@ export const CarCard = ( { car } : CarCardProps ) => {
                 /day
             </span>
         </p>
-        <div className='relative w-full h-40 my-3 object-contain'>
-            <Image src="/hero.png" alt='car picture' fill priority/>
+        <div className='relative w-full h-40 my-3 '>
+            <Image src={getCarImage(car)} alt='car picture' fill priority className=' object-contain'/>
         </div>
         <div className='relative flex w-full mt-2'>
             <div className='flex group-hover:invisible w-full justify-between text-gray'>
@@ -63,7 +62,7 @@ export const CarCard = ( { car } : CarCardProps ) => {
                 <CustomButton
                 btnType='button'
                 title='View More'
-                containerStyles='w-full rounded-full py-[16px] bg-primary-blue'
+                containerStyles='w-full rounded-full py-[16px] bg-primary-color'
                 textStyles=" text-white text-[14px] leading-[17px] font-bold"
                 rightIcon="/right-arrow.png"
                 handleClick={()=> setisOpen(true)}

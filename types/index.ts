@@ -29,3 +29,23 @@ export interface CarProps {
     transmission: string,
     year: number
 }
+
+export interface ManufacturersType {
+    [manufacturer: string]: string[];
+};
+
+
+export interface FilterProps {
+    manufacturer: string;
+    model: string;
+    limit?: number;
+  }
+
+  export interface HomeProps {
+    searchParams: FilterProps;
+  }
+
+  export interface ShowMoreProps {
+    pageNumber: number;
+    isNext: boolean;
+  }

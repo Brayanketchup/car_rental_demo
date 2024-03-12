@@ -1,11 +1,25 @@
 
-import { Hero, CustomFilter, SearchBar, CarCard, NoMoreCars } from '@/components'
-import { fetchCars } from '@/utils'
+import { Hero, SearchCar, CarCard, NoMoreCars, ShowMore } from '@/components'
+import { fetchCars } from '@/utils/apiUtils'
+import { HomeProps } from "@/types";
 
-export default async function Home() {
-  const allCars = await fetchCars();
+export default async function Home({ searchParams }: HomeProps) {
 
-  const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars
+  const manufacturer = searchParams.manufacturer;
+  const model = searchParams.model;
+  const limit = searchParams.limit;
+
+  const allCars = await fetchCars({
+
+    manufacturer: manufacturer || "",
+    model: model || "",
+    limit: limit || 10,
+
+  });
+
+  const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
+
+  const isNext = (searchParams.limit || 10) > allCars.length;
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 overflow-hidden">
@@ -19,12 +33,10 @@ export default async function Home() {
           </p>
         </div>
         <div className='mt-12 w-full flex-between items-center flex-wrap gap-5'>
-          <SearchBar />
-
-          <div className='flex justify-start flex-wrap items-center gap-2'>
-            {/* <CustomFilter title="fuel" /> */}
-            {/* <CustomFilter title="year" /> */}
-          </div>
+          <SearchCar 
+          
+          
+          />
         </div>
 
         {!isDataEmpty ? (
@@ -35,7 +47,15 @@ export default async function Home() {
               )
               )}
             </div>
-            <NoMoreCars/>
+
+            {isNext ? (
+              <NoMoreCars />
+            ) : (<ShowMore
+              pageNumber={(searchParams.limit || 10) / 10}
+              isNext={isNext}
+            />)}
+
+
           </section>
         ) : (
           <div className='mt-16 flex justify-center items-center flex-col gap-2'>

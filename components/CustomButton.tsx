@@ -17,7 +17,7 @@ export const CustomButton = ({ title, containerStyles, handleClick, btnType, tex
         {title}
         {rightIcon && (
           <div className='relative w-6 h-6 ml-1'>
-            <Image src={rightIcon} alt='right icon' fill className='object-contain'/>
+            <Image src={rightIcon} alt='right arrow icon' fill className='object-contain'/>
           </div>
         )}
     </span>
