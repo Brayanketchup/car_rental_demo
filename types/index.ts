@@ -36,8 +36,8 @@ export interface ManufacturersType {
 
 
 export interface FilterProps {
-    manufacturer: string;
-    model: string;
+    manufacturer?: string;
+    model?: string;
     limit?: number;
   }
 

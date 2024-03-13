@@ -7,7 +7,6 @@ import { updateSearchParams } from "@/utils/apiUtils";
 export const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
   const router = useRouter();
 
-  console.log("is next ",isNext);
   const handleNavigation = () => {
     // Calculate the new limit based on the page number and navigation type
     const newLimit = (pageNumber + 1) * 10;
@@ -24,7 +23,6 @@ export const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
       {!isNext && (
         <button
           type="button"
-        //   title="button"
           className="bg-primary-color rounded-full text-white flex flex-row relative justify-center items-center py-3 px-6 outline-none button-shodow"
           onClick={handleNavigation}
         >Show More</button>

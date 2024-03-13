@@ -20,7 +20,7 @@ export const CarCard = ( { car } : CarCardProps ) => {
     const carRent = calculateCarRent(city_mpg, year);
 
   return (
-    <div className='flex flex-col min-h-[350px] min-w-[230px] p-6 justify-center items-start text-black bg-primary-color-100 hover:bg-white hover:shadow-md rounded-3xl group'>
+    <div className='flex flex-col min-h-[400px] min-w-[305px] p-6 justify-center items-start text-black bg-primary-color-100 hover:bg-white hover:shadow-md rounded-3xl group'>
         <div className='w-full flex justify-between items-start gap-2'>
             <h2 className='text-[22px] leading-[26px] font-bold capitalize'>
                 {make} {model}
@@ -49,7 +49,7 @@ export const CarCard = ( { car } : CarCardProps ) => {
                 <div className='flex flex-col justify-center items-center gap-2'>
                     <Image src="/tire-logo.png" width={20} height={20} alt=''/>
                     <p className='text-[14px]'></p>
-                    {drive.toUpperCase()}
+                    {drive? drive.toUpperCase() : "N/A"}
                 </div>
                 <div className='flex flex-col justify-center items-center gap-2'>
                     <Image src="/gas-logo.png" width={20} height={20} alt=''/>

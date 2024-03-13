@@ -6,11 +6,9 @@ import Image from 'next/image';
 
 export const Hero = () => {
 
-
-
     return (
         <div className='hero'>
-            <div className='flex-1 pt-36 px-6'>
+            <div className='flex-1 pt-24 px-6'>
                 <h1 className='2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold'>
                     <span className="text-primary-color">Looking</span> to rent a car
                 </h1>
