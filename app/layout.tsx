@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Footer, Navbar } from "@/components";
+import { Footer, Navbar, Banner } from "@/components";
 import "./globals.css";
 
 
@@ -16,10 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative min-h-screen overflow-x-hidden">
-        <Navbar/>
+        <Navbar />
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }

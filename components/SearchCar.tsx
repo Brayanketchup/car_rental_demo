@@ -31,6 +31,7 @@ export const SearchCar = () => {
 
         searchParams.set("model", model);
         searchParams.set("manufacturer", manufacturer);
+        searchParams.set("limit", '10');
 
         const newPathname = `${window.location.pathname}?${searchParams.toString()}`;
 
@@ -57,14 +58,14 @@ export const SearchCar = () => {
     return (
         <form onSubmit={(e) => handleSubmit(e)} className='flex gap-7 items-center justify-start max-sm:flex-col w-full relative max-sm:gap-4 max-w-3xl'>
             {/* Manufacturer Select Input */}
-            <div className="mb-4 w-full ">
+            <div className="mb-4 w-auto ">
                 <label htmlFor="first-select" className="block text-sm font-medium  text-gray-700">Select Manufature</label>
                 <select
                     id="manufacturer-select"
                     name="manufacturer-select"
                     value={selectedManufacturer}
                     onChange={(e) => handleManufacturerChange(e)}
-                    className="mt-1 bg-primary-color-100 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm rounded-md"
+                    className="mt-1 bg-primary-color-100 block w-auto pl-3 pr-10 py-2  border-gray-300 focus:outline-none focus:ring-orange-500 focus:border-orange-500 text-xs sm:text-base rounded-md"
                 >
                     <option value="">Select a manufature</option>
                     {Object.keys(manufacturersData).map(manufacturer => (
@@ -77,7 +78,7 @@ export const SearchCar = () => {
 
             {/* Model Select Input */}
 
-            <div className="mb-4 w-full ">
+            <div className="mb-4 w-auto ">
                 <label htmlFor="first-select" className="block text-sm font-medium  text-gray-700">Select Model</label>
                 <select
                     id="model-select"
@@ -85,7 +86,7 @@ export const SearchCar = () => {
                     value={selectedModel}
                     onChange={(e) => handleModelChange(e)}
                     disabled={!selectedManufacturer || selectedManufacturer === ''}
-                    className="mt-1 bg-primary-color-100 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-orange-500 focus:border-orange-500 sm:text-sm rounded-md"
+                    className="mt-1 bg-primary-color-100 block w-auto pl-3 pr-10 py-2 border-gray-300 focus:outline-none focus:ring-orange-500 focus:border-orange-500 text-xs sm:text-base rounded-md"
                 >
                     <option value="">Select a model</option>
                     {models.map(model => (

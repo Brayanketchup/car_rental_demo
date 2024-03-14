@@ -1,5 +1,5 @@
 
-import { Hero, SearchCar, CarCard, NoMoreCars, ShowMore, NoCarsFound } from '@/components'
+import { Hero, SearchCar, CarCard, NoMoreCars, ShowMore, NoCarsFound, Banner } from '@/components'
 import { fetchCars } from '@/utils/apiUtils'
 import { HomeProps } from "@/types";
 
@@ -17,6 +17,9 @@ export default async function Home({ searchParams }: HomeProps) {
   const isNext = (searchParams.limit || 10) > allCars.length;
 
   return (
+    <>
+    
+    
     <main className="flex min-h-screen flex-col items-center justify-between p-24 overflow-hidden">
       <Hero />
 
@@ -57,5 +60,9 @@ export default async function Home({ searchParams }: HomeProps) {
         )}
       </div>
     </main>
+    
+    <Banner/>
+    
+    </>
   );
 }
