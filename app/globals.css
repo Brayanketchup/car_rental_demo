@@ -41,5 +41,16 @@
  @apply flex-col-reverse h-full absolute right-0;
 
 }
-
 /* END: Button Styles */
+
+.custom-image-showdow {
+  box-shadow: 10px 10px;;
+  /* content: ''; */
+  /* position:; */
+  /* right: 0;
+  top: 0;
+  width: 50%; 
+  height: 50%;
+  background: linear-gradient(to bottom left, rgb(0, 0, 0));
+  z-index: -1; */
+}

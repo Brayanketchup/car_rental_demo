@@ -60,9 +60,9 @@ export const Navbar = () => {
 
 
       {/* mobile */}
-      <nav className=' lg:hidden justify-between m-8'>
+      <nav className=' lg:hidden justify-between'>
         <Link rel="" href="/">
-          <Image src='/logo.png' alt='Car logo' width={50} height={18} className='object-contain' />
+          <Image src='/logo.png' alt='Car logo' width={50} height={18} className='object-contain m-2' />
         </Link>
 
         <button onClick={toggleMenu} className="flex flex-col gap-1 fixed top-5 right-5 z-50">

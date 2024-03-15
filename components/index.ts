@@ -9,6 +9,7 @@ import { SearchCar } from './SearchCar';
 import { ShowMore } from './ShowMore';
 import { NoCarsFound } from './NoCarsFound';
 import { Banner } from './Banner';
+import { PlanCard } from './PlanCard';
 
 
 export {
@@ -22,5 +23,6 @@ export {
     SearchCar,
     ShowMore,
     NoCarsFound,
-    Banner
+    Banner,
+    PlanCard
 }

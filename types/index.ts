@@ -49,3 +49,10 @@ export interface FilterProps {
     pageNumber: number;
     isNext: boolean;
   }
+
+  export interface PlanCardProps {
+    tittle: string;
+    text: string;
+    imgLink: string;
+  }
+
