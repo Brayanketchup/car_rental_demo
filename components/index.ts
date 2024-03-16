@@ -1,5 +1,4 @@
 import { Hero } from './Hero';
-import { CustomButton } from './CustomButton';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { CarCard } from './CarCard';
@@ -10,11 +9,15 @@ import { ShowMore } from './ShowMore';
 import { NoCarsFound } from './NoCarsFound';
 import { Banner } from './Banner';
 import { PlanCard } from './PlanCard';
+import { ContactForm } from './ContactForm';
+import { ContactInfo } from './ContactInfo';
+import { HowToPlanTrip } from './HowToPlanTrip';
+import { WhyUs } from './WhyUs';
+import { AboutChoices } from './AboutChoices';
 
 
 export {
     Hero,
-    CustomButton,
     Footer,
     Navbar,
     CarCard,
@@ -24,5 +27,10 @@ export {
     ShowMore,
     NoCarsFound,
     Banner,
-    PlanCard
+    PlanCard,
+    ContactForm,
+    ContactInfo,
+    HowToPlanTrip,
+    WhyUs,
+    AboutChoices
 }

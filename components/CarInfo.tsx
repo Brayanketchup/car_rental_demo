@@ -3,9 +3,7 @@
 import { CarProps } from '@/types';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Fragment } from 'react';
 import { getCarImage } from '@/utils/apiUtils';
-
 
 
 interface CarInfoProps {
@@ -13,19 +11,6 @@ interface CarInfoProps {
   closeModal: () => void;
   car: CarProps
 }
-
-// city_mpg: number,
-// class: string,
-// combination_mpg: number,
-// cylinders: number,
-// displacement: number,
-// drive: string,
-// fuel_type: string,
-// highway_mpg: number,
-// make: string,
-// model: string,
-// transmission: string,
-// year: number
 
 
 export const CarInfo = ({ isOpen, closeModal, car }: CarInfoProps) => {
@@ -86,14 +71,11 @@ export const CarInfo = ({ isOpen, closeModal, car }: CarInfoProps) => {
               </div>
 
               <div className="bg-gray-50 px-4 py-3 flex flex-row-reverse">
-                <button type="button" className="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-orange-500 text-base font-medium text-white hover:bg-orange-700 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" onClick={closeModal}>
+                <button type="button" className="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-primary-color text-base font-medium text-white hover:bg-orange-700 transition-colors focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" onClick={closeModal}>
                   Close
                 </button>
               </div>
             </div>
-
-
-
 
           </div>
         </div>

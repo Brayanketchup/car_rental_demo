@@ -1,7 +1,4 @@
-import { headers } from "next/headers";
 import { CarProps, FilterProps } from "@/types";
-
-
 
 
 export async function fetchCars(filters : FilterProps) {

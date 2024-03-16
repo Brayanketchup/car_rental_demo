@@ -4,7 +4,6 @@ import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { CustomButton } from '@/components';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +42,7 @@ export const Navbar = () => {
 
       <nav className='lg:flex hidden max-w-[1440px] md:mx-auto justify-between items-center sm:px-16 px-6 py-4'>
         <Link rel="" href="/">
-          <Image src='/logo.png' alt='Car logo' width={50} height={18} className='object-contain' />
+          <Image src='/logo.png' alt='Car logo' width={50} height={50} className='object-contain' />
         </Link>
 
         <ul className='flex flex-row justify-center '>
@@ -53,8 +52,17 @@ export const Navbar = () => {
         </ul>
 
         <ul className='flex flex-row justify-end'>
-          <li><CustomButton title="Register" btnType="button" containerStyles='button-color-transition rounded-full font-extrabold min-w-[130px]' /></li>
-          <li><CustomButton title="Login" btnType="button" containerStyles='bg-primary-color text-white rounded-full min-w-[130px] button-shodow' /></li>
+          <li><button 
+            type='button'
+            className='flex flex-row relative justify-center items-center py-3 px-6 outline-none button-color-transition rounded-full font-extrabold min-w-[130px]'>
+              Register 
+            </button></li>
+
+          <li><button
+            type='button'
+            className='flex flex-row relative justify-center items-center py-3 px-6 outline-none bg-primary-color text-white rounded-full min-w-[130px] button-shodow'>
+              Login
+              </button></li>
         </ul>
       </nav>
 
@@ -62,7 +70,7 @@ export const Navbar = () => {
       {/* mobile */}
       <nav className=' lg:hidden justify-between'>
         <Link rel="" href="/">
-          <Image src='/logo.png' alt='Car logo' width={50} height={18} className='object-contain m-2' />
+          <Image src='/logo.png' alt='Car logo' width={50} height={50} className='object-contain m-2' />
         </Link>
 
         <button onClick={toggleMenu} className="flex flex-col gap-1 fixed top-5 right-5 z-50">
@@ -76,7 +84,7 @@ export const Navbar = () => {
 
           <ul className="flex flex-col-reverse gap-4 p-4">
             <li><Link href="/" className="flex justify-center items-center">
-              <Image src="/logo.png" alt="Car logo" width={50} height={18} className="object-contain" />
+              <Image src="/logo.png" alt="Car logo" width={50} height={50} className="object-contain" />
             </Link></li>
 
             <div className='border-t border-gray-200'></div>

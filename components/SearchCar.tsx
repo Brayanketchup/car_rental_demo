@@ -4,7 +4,6 @@ import React from 'react'
 import { useState } from 'react';
 import { manufacturersData } from '@/constants';
 import { useRouter } from "next/navigation";
-import { FilterProps } from '@/types';
 
 export const SearchCar = () => {
 
