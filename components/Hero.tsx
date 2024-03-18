@@ -17,7 +17,7 @@ export const Hero = () => {
 
                 <a
                     href='#Cars'
-                    className='inline-flex flex-row relative justify-center items-center py-3 px-6 outline-none bg-primary-color text-white rounded-full p-2 mt-10 button-shodow'>
+                    className='p-2 mt-10 round-button bg-primary-color text-white button-shodow'>
                     <span className='flex flex-row text-center items-center'>
                         Explore cars
                     </span>

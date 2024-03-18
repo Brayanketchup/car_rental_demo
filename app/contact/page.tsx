@@ -19,8 +19,8 @@ export default function contact() {
 
       </section>
       <div className='w-full h-auto py-10 px-5 flex flex-wrap justify-center text-white bg-[#2d2d2d] '>
-        <h1 className=' font-extrabold 2xl:text-[40px] sm:text-[30px] text-[20px] '>Book a car by getting in touch with us</h1>
-        <p className='2xl:text-[40px] sm:text-[30px] text-[20px] text-primary-color'>&nbsp;(123) 123-1231</p>
+        <h1 className='tittle-style'>Book a car by getting in touch with us</h1>
+        <p className='tittle-style text-primary-color'>&nbsp;(123) 123-1231</p>
       </div>
     </main>
   )

@@ -4,8 +4,8 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "The Car",
-  description: "The best cars",
+  title: "CarRental_Demo",
+  description: "The best cars for Rental",
 };
 
 export default function RootLayout({

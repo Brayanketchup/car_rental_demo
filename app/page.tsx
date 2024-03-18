@@ -26,9 +26,6 @@ export default async function Home({ searchParams }: HomeProps) {
           <section className='mt-12 py-4 w-full' id='catalogue'>
             <div className='flex flex-col items-start justify-start gap-y-2.5 text-black-100'>
               <h1 className='text-4xl font-extrabold'>Car Catalogue</h1>
-              <p>
-                Explore the cars
-              </p>
             </div>
             <div className='mt-12 w-full flex-between items-center flex-wrap gap-5'>
               <SearchCar />

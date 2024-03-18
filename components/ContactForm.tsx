@@ -18,7 +18,8 @@ export const ContactForm = () => {
               </label>
               <textarea placeholder="Write Here.." className=' bg-gray-200 h-72 px-5 py-8 rounded-md border-none outline-none mb-8 '></textarea>
 
-              <button type="submit" className=' bg-primary-color hover:bg-orange-700 transition-colors px-7 py-8 shadow-sm shadow-orange-500 text-white font-bold cursor-pointer'>
+              <button type="submit" className=' px-7 py-8 square-button
+              '>
                 &nbsp; Send Message
               </button>
             </form>

@@ -20,7 +20,7 @@ export const CarCard = ({ car }: CarCardProps) => {
     const carRent = calculateCarRent(city_mpg, year);
 
     return (
-        <div className='flex flex-col min-h-[400px] min-w-[305px] p-6 justify-center items-start text-black bg-primary-color-100 hover:bg-white hover:shadow-md rounded-3xl group'>
+        <div className='flex flex-col min-h-[400px] w-[305px] p-6 justify-center items-start text-black bg-primary-color-100 hover:bg-white hover:shadow-md rounded-3xl group'>
             <div className='w-full flex justify-between items-start gap-2'>
                 <h2 className='text-[22px] leading-[26px] font-bold capitalize'>
                     {make} {model}
@@ -63,7 +63,8 @@ export const CarCard = ({ car }: CarCardProps) => {
                         disabled={false}
                         type='button'
                         onClick={() => setisOpen(true)}
-                        className='flex flex-row relative justify-center items-center py-[16px] px-6 outline-none w-full rounded-full  bg-primary-color hover:bg-orange-700 transition-colors'
+                        className='round-button w-full  bg-primary-color hover:bg-orange-700 transition-colors
+                        '
                     >
                         <span className='flex flex-row text-center items-center text-white text-[14px] leading-[17px] font-bold'>
                             View More

@@ -54,13 +54,14 @@ export const Navbar = () => {
         <ul className='flex flex-row justify-end'>
           <li><button 
             type='button'
-            className='flex flex-row relative justify-center items-center py-3 px-6 outline-none button-color-transition rounded-full font-extrabold min-w-[130px]'>
+            className='min-w-[130px] font-extrabold button-color-transition round-button '>
+              {/*  */}
               Register 
             </button></li>
 
           <li><button
             type='button'
-            className='flex flex-row relative justify-center items-center py-3 px-6 outline-none bg-primary-color text-white rounded-full min-w-[130px] button-shodow'>
+            className='min-w-[130px] round-button bg-primary-color text-white button-shodow'>
               Login
               </button></li>
         </ul>

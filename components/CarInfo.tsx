@@ -70,8 +70,9 @@ export const CarInfo = ({ isOpen, closeModal, car }: CarInfoProps) => {
 
               </div>
 
-              <div className="bg-gray-50 px-4 py-3 flex flex-row-reverse">
-                <button type="button" className="mt-3 w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-primary-color text-base font-medium text-white hover:bg-orange-700 transition-colors focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" onClick={closeModal}>
+              <div className="bg-gray-50 px-4 py-3 flex justify-end">
+                <button type="button" 
+                className="mt-3 px-4 py-2 square-button" onClick={closeModal}>
                   Close
                 </button>
               </div>

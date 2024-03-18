@@ -5,7 +5,7 @@ export const HowToPlanTrip = () => {
   return (
     <div className='text-center'>
           <h2 className='2xl:text-[30px] sm:text-[20px] text-[15px] font-semibold'>Plan your trip</h2>
-          <h1 className='2xl:text-[50px] sm:text-[40px] text-[30px] font-extrabold'>Quick & easy car rental</h1>
+          <h1 className='tittle-style'>Quick & easy car rental</h1>
           <div className='w-full flex justify-center flex-wrap'>
             <PlanCard
             tittle='Choose a Vehicle'
