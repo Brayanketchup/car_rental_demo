@@ -5,12 +5,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  // functions
-  // Function to handle opening and closing of the menu
   const toggleMenu = () => setIsOpen(!isOpen);
+
 
   //function to close the menu in case of screen size change
   useEffect(() => {
@@ -36,6 +35,7 @@ export const Navbar = () => {
     };
   }, [isOpen]); // use effect will run when isOpen change
 
+
   return (
     <header className='w-full absolute z-10'>
       {/* desktop */}
@@ -52,18 +52,17 @@ export const Navbar = () => {
         </ul>
 
         <ul className='flex flex-row justify-end'>
-          <li><button 
+          <li><button
             type='button'
             className='min-w-[130px] font-extrabold button-color-transition round-button '>
-              {/*  */}
-              Register 
-            </button></li>
+            Register
+          </button></li>
 
           <li><button
             type='button'
             className='min-w-[130px] round-button bg-primary-color text-white button-shodow'>
-              Login
-              </button></li>
+            Login
+          </button></li>
         </ul>
       </nav>
 

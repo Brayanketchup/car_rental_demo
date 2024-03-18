@@ -11,7 +11,6 @@ export async function fetchCars(filters : FilterProps) {
     const response = await fetch (`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&model=${model}&limit=${limit}`, { headers: headers,});
     const result = await response.json();
     return result;
-	
 }
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
@@ -19,12 +18,13 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
     const age: number = currentYear - year;
     const mileageAdjustment: number = Math.floor(city_mpg / 10000);
   
-    const basePrice: number = 100;
+    const basePrice: number = 120;
     const ageDiscount: number = age * 5;
     const mileageDiscount: number = mileageAdjustment * 2;
   
     const price: number = basePrice - ageDiscount - mileageDiscount;
-    return Math.max(price, 55);
+    console.log('price' ,price);
+    return Math.max(price, 25);
   };
 
   export const updateSearchParams = (type: string, value: string) => {
