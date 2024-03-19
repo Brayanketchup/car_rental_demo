@@ -4,13 +4,14 @@ import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
   const toggleMenu = () => setIsOpen(!isOpen);
-
-
+  
   //function to close the menu in case of screen size change
   useEffect(() => {
     const checkScreenSize = () => {
@@ -35,6 +36,7 @@ export const Navbar = () => {
     };
   }, [isOpen]); // use effect will run when isOpen change
 
+  
 
   return (
     <header className='w-full absolute z-10'>
@@ -46,9 +48,23 @@ export const Navbar = () => {
         </Link>
 
         <ul className='flex flex-row justify-center '>
-          <li><Link href='/' className='font-extrabold p-2 button-color-transition'>Home</Link></li>
-          <li><Link href='/about' className='font-extrabold p-2 button-color-transition'>About</Link></li>
-          <li><Link href='/contact' className='font-extrabold p-2 button-color-transition'>Contact</Link></li>
+          <li><Link 
+          href='/' 
+          className={`${(pathname === '/')? 'text-primary-color':' text-black' } 
+          font-extrabold p-2 button-color-transition`}
+          >Home</Link></li>
+
+          <li><Link 
+          href='/about' 
+          className={`${(pathname === '/about')? 'text-primary-color':' text-black' } 
+          font-extrabold p-2 button-color-transition`}
+          >About</Link></li>
+
+          <li><Link 
+          href='/contact' 
+          className={`${(pathname === '/contact')? 'text-primary-color':' text-black' } 
+          font-extrabold p-2 button-color-transition`}
+          >Contact</Link></li>
         </ul>
 
         <ul className='flex flex-row justify-end'>
