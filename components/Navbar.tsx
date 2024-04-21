@@ -111,8 +111,8 @@ export const Navbar = () => {
 
             <div className='border-t border-gray-200'></div>
 
-            <li><Link href="/register" className="button-color-transition font-extrabold min-w-[130px]">Register</Link></li>
-            <li> <Link href="/login" className="button-color-transition font-extrabold min-w-[130px]">Login</Link></li>
+            <li><Link href="/" className="button-color-transition font-extrabold min-w-[130px]">Register</Link></li>
+            <li> <Link href="/" className="button-color-transition font-extrabold min-w-[130px]">Login</Link></li>
           </ul>
         </div>
       </nav>
