@@ -12,9 +12,6 @@ export const AboutChoices = () => {
             <Link
               href="/"
               className='mt-3 w-fit px-4 py-2 square-button'>
-
-
-
               Book The Perfect Car.
             </Link>
           </div>

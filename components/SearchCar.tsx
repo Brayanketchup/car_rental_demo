@@ -116,7 +116,9 @@ export const SearchCar = () => {
                 <button
                     type="submit"
                     className=" 
-                    px-4 py-3 flex square-button" >
+                    px-4 py-3 flex square-button"
+                    // cursor-pointer bg-primary-color text-base font-medium text-white hover:bg-orange-700 transition-colors focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm
+                >
                     Submit
                 </button>
             </form>
