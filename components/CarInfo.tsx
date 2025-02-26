@@ -3,7 +3,7 @@
 import { CarProps } from '@/types';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { getCarImage } from '@/utils/apiUtils';
+
 
 
 interface CarInfoProps {
@@ -48,7 +48,7 @@ export const CarInfo = ({ isOpen, closeModal, car }: CarInfoProps) => {
 
                 <div className='flex flex-row justify-between'>
                   <div className='relative flex-1 rounded-lg h-40 bg-cover bg-center bg-no-repeat'  style={{ backgroundImage: "url('/patter-background.jpg')"}}>
-                    <Image src={getCarImage(car)} alt='car model' fill priority className='object-contain' />
+                    <Image src='/car-default.png' alt='car model' fill priority className='object-contain' />
                   </div>
                 </div>
                   <h3 className="text-lg leading-6 font-bold text-gray-900 py-5" id="modal-title"> {car.make} {car.model}</h3>

@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image';
 import { CarProps } from '@/types';
 import { useState } from 'react';
-import { calculateCarRent, getCarImage } from '@/utils/apiUtils';
+import { calculateCarRent } from '@/utils/apiUtils';
 import { CarInfo } from '@/components';
 
 
@@ -37,7 +37,7 @@ export const CarCard = ({ car }: CarCardProps) => {
                 </span>
             </p>
             <div className='relative w-full h-40 my-3 '>
-                <Image src={getCarImage(car)} alt='car picture' fill priority className=' object-contain' />
+                <Image src='/car-default.png' alt='car picture' fill priority className=' object-contain' />
             </div>
             <div className='relative flex w-full mt-2'>
                 <div className='flex group-hover:invisible w-full justify-between text-gray'>
