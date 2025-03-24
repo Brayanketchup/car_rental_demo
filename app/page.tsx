@@ -5,9 +5,6 @@ import { HomeProps } from "@/types";
 
 export default async function Home({ searchParams }: HomeProps) {
   
-  console.log('RAPIDAPI_KEY:', process.env.NEXT_PUBLIC_RAPIDAPI_KEY);
-  console.log('RAPIDAPI_HOST:', process.env.NEXT_PUBLIC_RAPIDAPI_HOST);
-
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer,
     model: searchParams.model,
