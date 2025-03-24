@@ -1,9 +1,10 @@
-
+'use client'
 import { Hero, SearchCar, CarCard, NoMoreCars, ShowMore, NoCarsFound } from '@/components'
 import { fetchCars } from '@/utils/apiUtils'
 import { HomeProps } from "@/types";
 
 export default async function Home({ searchParams }: HomeProps) {
+  
   console.log('RAPIDAPI_KEY:', process.env.NEXT_PUBLIC_RAPIDAPI_KEY);
   console.log('RAPIDAPI_HOST:', process.env.NEXT_PUBLIC_RAPIDAPI_HOST);
 
